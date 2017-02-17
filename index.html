@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.clearfix {
+				zoom: 1;
+			}
+			.clearfix:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body class="clearfix">
+		<script src="js/seajs-master/dist/sea.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.config({
+			    alias: { 
+			    	'jquery': './js/jquery',
+			    	'tool': './js/tool',
+			    	'snake': './js/snake'
+			    }
+			});
+			seajs.use(['snake'], function(TanChiShe){
+				TanChiShe.init();
+           });
+		</script>
+	</body>
+</html>
